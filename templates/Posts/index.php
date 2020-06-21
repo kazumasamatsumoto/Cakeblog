@@ -16,5 +16,17 @@
         ?>
         <hr>
     <?php endforeach;?>
+
+    <?php if($this->Paginator->total() > 1): ?>
+        <div class="paginator">
+            <ul class="pagination">
+                <?= $this->Paginator->first('<< 最初') ?>
+                <?= $this->Paginator->prev(('< 前へ')) ?>
+                <?= $this->Paginator->numbers() ?>
+                <?= $this->Paginator->next('> 次へ') ?>
+                <?= $this->Paginator->last('>> 最後へ') ?>
+            </ul>
+        </div>
+    <?php endif; ?>
 </div>
 

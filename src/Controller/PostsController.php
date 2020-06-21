@@ -5,7 +5,7 @@ namespace App\Controller;
 class PostsController extends AppController
 {
     public $paginate = [
-        'limit' => 2,
+        'limit' => 10,
         'order' => [
             'created' => 'desc'
         ]
