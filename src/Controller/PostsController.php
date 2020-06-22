@@ -12,6 +12,14 @@ class PostsController extends AppController
         'contain' => 'Users'
     ];
 
+    public function beforeFilter(\Cake\Event\EventInterface $event)
+    {
+        parent::beforeFilter($event);
+
+        $userAll = [1=>"admin", 2=>"matsumoto"];
+        $this->set(compact("userAll"));
+    }
+
     public function index()
     {
         $posts = $this->paginate($this->Posts->find());

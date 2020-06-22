@@ -5,6 +5,14 @@
  */
 ?>
 <div class="content">
+
+    <?php echo $this->Form->input('username', [
+        'label' => '',
+        "type"=>"select","empty"=>"ユーザ名",
+        "options"=>$userAll,
+        ])
+    ;?>
+
     <?php foreach ($posts as $post): ?>
         <h3><?= h($post->title) ?></h3>
         <p><?= $post->created->i18nFormat('YYYY年MM月dd日 HH:mm') ?></p>
