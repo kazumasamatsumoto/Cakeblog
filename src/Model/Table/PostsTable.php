@@ -44,6 +44,8 @@ class PostsTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+
+        $this->belongsTo('Users');
     }
 
     /**
@@ -78,6 +80,11 @@ class PostsTable extends Table
         $validator
             ->boolean('published')
             ->notEmptyString('published');
+
+        $validator
+            ->integer('user_id')
+            ->notEmptyString('user_id');
+
 
         return $validator;
     }

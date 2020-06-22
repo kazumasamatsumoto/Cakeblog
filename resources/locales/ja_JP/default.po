@@ -111,7 +111,7 @@ msgstr "投稿"
 #: Admin/Posts/index.php:33
 #: Admin/Users/index.php:31
 msgid "View"
-msgstr "見る"
+msgstr "詳細"
 
 #: Admin/Posts/index.php:34
 #: Admin/Users/index.php:32
