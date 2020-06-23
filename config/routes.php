@@ -64,14 +64,14 @@ $routes->scope('/', function (RouteBuilder $builder) {
      * to use (in this case, templates/Pages/home.php)...
      */
     // $builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
-    $builder->connect('/', ['controller' => 'Posts', 'action' => 'index']);
+    $builder->connect('/', ['controller' => 'Profiles', 'action' => 'index']);
     /*
      * ...and connect the rest of 'Pages' controller's URLs.
      */
     $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
     Router::prefix('admin', function ($routes) {
-        $routes->connect('/', ['controller' => 'Posts', 'action' => 'index']);
+        $routes->connect('/', ['controller' => 'Profiles', 'action' => 'index']);
         $routes->fallbacks('DashedRoute');
     });
     /*
